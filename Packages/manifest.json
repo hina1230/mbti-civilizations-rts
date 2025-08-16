@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "com.unity.ai.navigation": "1.1.5",
     "com.unity.collab-proxy": "2.9.1",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.netcode.gameobjects": "1.7.1",
+    "com.unity.services.authentication": "2.7.4",
+    "com.unity.services.core": "1.12.5",
+    "com.unity.services.lobby": "1.1.1",
+    "com.unity.services.relay": "1.0.5",
     "com.unity.textmeshpro": "3.0.7",
     "com.unity.timeline": "1.7.7",
     "com.unity.ugui": "1.0.0",

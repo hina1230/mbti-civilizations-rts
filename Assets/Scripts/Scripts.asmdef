@@ -2,14 +2,9 @@
     "name": "MBTICivilizations",
     "rootNamespace": "MBTICivilizations",
     "references": [
-        "Unity.Netcode.Runtime",
-        "Unity.Netcode.Components",
-        "Unity.Services.Core",
-        "Unity.Services.Authentication",
-        "Unity.Services.Lobbies",
-        "Unity.Services.Relay",
         "Unity.TextMeshPro"
     ],
+    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

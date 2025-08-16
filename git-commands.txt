@@ -1,0 +1,8 @@
+GitHubリポジトリ作成後に実行するコマンド:
+
+cd MBTI-RTS-Game
+git push -u origin main
+
+リポジトリURL: https://github.com/hina1230/mbti-civilizations-rts
+
+作成完了後、上記のコマンドを実行してください。
