@@ -1,9 +1,14 @@
 # Unity プロジェクト セットアップ手順
 
 ## 🎯 現在の状況
-✅ **基本的なスクリプトが動作可能**: Netcodeなしでもコンパイル可能
+✅ **コンパイルエラー解決済み**: Netcode依存ファイルを一時無効化
+✅ **基本版クラスで動作可能**: Basic版でコンパイル・実行可能
 ✅ **必要なパッケージ設定済み**: manifest.jsonに追加済み
 ✅ **GitHubに接続済み**: バージョン管理準備完了
+
+## 📁 現在の構成
+- **有効なファイル**: `*Basic.cs` - コンパイル可能
+- **無効なファイル**: `*.cs.disabled` - Netcode依存（一時無効化）
 
 ## 📦 必要なパッケージインストール
 
@@ -77,9 +82,27 @@
 ### FullNetcode版への移行
 パッケージインストール完了後：
 
-1. **GameManagerBasic** → **GameManager** に置換
-2. **ResourceManagerBasic** → **ResourceManager** に置換  
-3. **CivilizationManagerBasic** → **CivilizationManager** に置換
+1. **無効化ファイルを有効化**:
+   ```bash
+   mv Assets/Scripts/Core/GameManager.cs.disabled Assets/Scripts/Core/GameManager.cs
+   mv Assets/Scripts/Resources/ResourceManager.cs.disabled Assets/Scripts/Resources/ResourceManager.cs
+   mv Assets/Scripts/Civilizations/CivilizationManager.cs.disabled Assets/Scripts/Civilizations/CivilizationManager.cs
+   mv Assets/Scripts/Civilizations/CivilizationBase.cs.disabled Assets/Scripts/Civilizations/CivilizationBase.cs
+   mv Assets/Scripts/Civilizations/INTJ/INTJCivilization.cs.disabled Assets/Scripts/Civilizations/INTJ/INTJCivilization.cs
+   mv Assets/Scripts/Units/UnitBase.cs.disabled Assets/Scripts/Units/UnitBase.cs
+   mv Assets/Scripts/Networking/NetworkSetup.cs.disabled Assets/Scripts/Networking/NetworkSetup.cs
+   mv Assets/Scripts/UI/MainMenuUI.cs.disabled Assets/Scripts/UI/MainMenuUI.cs
+   mv Assets/Scripts/UI/GameUI.cs.disabled Assets/Scripts/UI/GameUI.cs
+   ```
+
+2. **Basic版ファイルを削除**:
+   ```bash
+   rm Assets/Scripts/Core/GameManagerBasic.cs
+   rm Assets/Scripts/Resources/ResourceManagerBasic.cs
+   rm Assets/Scripts/Civilizations/CivilizationManagerBasic.cs
+   rm Assets/Scripts/Units/UnitBaseBasic.cs
+   rm Assets/Scripts/UI/MainMenuUIBasic.cs
+   ```
 
 ### シーン作成
 1. **MainMenu** シーン作成
